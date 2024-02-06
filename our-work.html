@@ -5,38 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+           <link rel="icon" href="1.jpg" type="image/jpeg">
+
     <title>Τα Έργα μας</title>
 </head>
 
 <body>
     <header>
-        <h1>Art Vibes Productions</h1>
-        <div id="menu-icon">&#9776;</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Our Services</a></li>
-                <li><a href="our-work.html">Our Work</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+      
+
+
+
+        <!-- Στο index.html -->
+   
+       
+       <!-- Υπόλοιπος κώδικας της επικεφαλίδας -->
+   
+   
+           
+         
+       <div id="menu-icon">&#9776;</div>
+   
+    
+       
+   <nav>
+       <div id="logo-container">
+           <img src="31.jpg" alt="Site Logo">
+       </div>
+       <ul class="nav-list">
+           <li><a href="index.html" data-lang="home">Home</a></li>
+           <li><a href="about.html" data-lang="aboutUs">About Us</a></li>
+           <li><a href="services.html" data-lang="ourServices">Our Services</a></li>
+           <li><a href="our-work.html" data-lang="ourWork">Our Work</a></li>
+           <li><a href="contact.html" data-lang="contactUs">Contact Us</a></li>
+       </ul>
+       <div id="language-selector">
+           <img src="18.png" alt="Greek Flag" onclick="changeLanguage('el')" class="flag">
+           <img src="17.jpg" alt="UK Flag" onclick="changeLanguage('en')" class="flag">
+       </div>
+   </nav>
+       </header>
 <!-- Προσθήκη μοντάλ για τους τίτλους των σελίδων -->
 <div id="modal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Our Services</a></li>
-            <li><a href="our-work.html">Our Work</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html" data-lang="home">Home</a></li>
+            <li><a href="about.html" data-lang="aboutUs">About Us</a></li>
+            <li><a href="services.html" data-lang="ourServices">Our Services</a></li>
+            <li><a href="our-work.html" data-lang="ourWork">Our Work</a></li>
+            <li><a href="contact.html" data-lang="contactUs">Contact Us</a></li>
         </ul>
+           <div id="language-selector">
+        <img src="18.png" alt="Greek Flag" onclick="changeLanguage('el')" class="flag">
+        <img src="17.jpg" alt="UK Flag" onclick="changeLanguage('en')" class="flag">
     </div>
+    </div>
+    
 </div>
     <section id="our-work">
-        <h2>Our Work</h2>
+        <h2 data-lang="ourWork">Our Work</h2>
     
         <div class="work">
             <!-- Προσθέστε τον παρακάτω κώδικα για τη φωτογραφία και την περιγραφή -->
@@ -45,9 +73,9 @@
                     <img src="8.jpg" alt="Έργο 1" class="zoom">
                 </a>
                 <div class="description">
-                    <p style="text-align: justify; text-indent: 50px; margin-bottom: 20px;">GRis Festival is a festival from Greece dedicated to showcasing new artists and performers who have a fresh and innovative approach to Greek culture and heritage. With a focus on challenging stereotypes, celebrating diversity, and promoting creativity, this festival is all about bringing people together and fostering a greater understanding and appreciation of different cultures and perspectives.</p>
-                    <p style="text-align: justify; text-indent: 50px; margin-bottom: 20px;">At GRis Festival, you will be re-introduced to Greece as it is today, and to the Greeks who have developed throughout time. This is accomplished through collaborations, the exchange of ideas and perceptions, and through the mixture of all civilizations that have influenced, inspired, and contributed to modern Greek culture as expressed through its various forms of art. Both the creators and the audience have come to leave their mark on this world, express themselves, make all global citizens feel the modern GR vibes, and inspire future artistic waves to come!</p>
-                    <p style="text-align: justify; text-indent: 50px; margin-bottom: 20px;">GRis Festival comprises a diverse range of art forms, including dance performances, photography exhibitions, music concerts, theatrical plays, short film screenings, and food tastings. From the traditional to the avant-garde, there is something for everyone at this exciting and dynamic festival.</p>
+                    <p data-lang="ourWorkDescription1" style="text-align: justify; margin-bottom: 20px;">GRis Festival is a festival from Greece dedicated to showcasing new artists and performers who have a fresh and innovative approach to Greek culture and heritage. With a focus on challenging stereotypes, celebrating diversity, and promoting creativity, this festival is all about bringing people together and fostering a greater understanding and appreciation of different cultures and perspectives.</p>
+                    <p data-lang="ourWorkDescription2" style="text-align: justify; margin-bottom: 20px;">At GRis Festival, you will be re-introduced to Greece as it is today, and to the Greeks who have developed throughout time. This is accomplished through collaborations, the exchange of ideas and perceptions, and through the mixture of all civilizations that have influenced, inspired, and contributed to modern Greek culture as expressed through its various forms of art. Both the creators and the audience have come to leave their mark on this world, express themselves, make all global citizens feel the modern GR vibes, and inspire future artistic waves to come!</p>
+                    <p data-lang="ourWorkDescription3" style="text-align: justify; margin-bottom: 20px;">GRis Festival comprises a diverse range of art forms, including dance performances, photography exhibitions, music concerts, theatrical plays, short film screenings, and food tastings. From the traditional to the avant-garde, there is something for everyone at this exciting and dynamic festival.</p>
                 </div>
             <!-- Τέλος του κώδικα για τον πρώτο "work-item" -->
     
@@ -59,7 +87,14 @@
     
 
     <!-- Προσθέστε άλλα έργα κατά βούληση -->
-    <script src="script.js"></script>
+    <!-- Στο about.html -->
+<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        initializeLanguage();
+    });
+</script>
+
    
 </body>
 
