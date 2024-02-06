@@ -5,68 +5,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+           <link rel="icon" href="1.jpg" type="image/jpeg">
+
     <title>Υπηρεσίες</title>
     
 </head>
 
 <body>
     <header>
-        <h1>Art Vibes Productions</h1>
-        <div id="menu-icon">&#9776;</div>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#our-services">Our Services</a></li>
-                <li><a href="#our-work">Our Work</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+      
+
+
+
+        <!-- Στο index.html -->
+   
+       
+       <!-- Υπόλοιπος κώδικας της επικεφαλίδας -->
+   
+   
+           
+         
+       <div id="menu-icon">&#9776;</div>
+   
+    
+       
+   <nav>
+       <div id="logo-container">
+           <img src="31.jpg" alt="Site Logo">
+       </div>
+       <ul class="nav-list">
+           <li><a href="index.html" data-lang="home">Home</a></li>
+           <li><a href="about.html" data-lang="aboutUs">About Us</a></li>
+           <li><a href="services.html" data-lang="ourServices">Our Services</a></li>
+           <li><a href="our-work.html" data-lang="ourWork">Our Work</a></li>
+           <li><a href="contact.html" data-lang="contactUs">Contact Us</a></li>
+       </ul>
+       <div id="language-selector">
+           <img src="18.png" alt="Greek Flag" onclick="changeLanguage('el')" class="flag">
+           <img src="17.jpg" alt="UK Flag" onclick="changeLanguage('en')" class="flag">
+       </div>
+   </nav>
+       </header>
 <!-- Προσθήκη μοντάλ για τους τίτλους των σελίδων -->
 <div id="modal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Our Services</a></li>
-            <li><a href="our-work.html">Our Work</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html" data-lang="home">Home</a></li>
+            <li><a href="about.html" data-lang="aboutUs">About Us</a></li>
+            <li><a href="services.html" data-lang="ourServices">Our Services</a></li>
+            <li><a href="our-work.html" data-lang="ourWork">Our Work</a></li>
+            <li><a href="contact.html" data-lang="contactUs">Contact Us</a></li>
         </ul>
+           <div id="language-selector">
+        <img src="18.png" alt="Greek Flag" onclick="changeLanguage('el')" class="flag">
+        <img src="17.jpg" alt="UK Flag" onclick="changeLanguage('en')" class="flag">
+    </div>
     </div>
 </div>
+<section id="our-services2">
+    <h2 data-lang="ourServices">Our Services</h2>
+
     <section id="our-services">
-        <h2>Our Services</h2>
-
-        <div class="service">
-            <img src="service1.jpg" alt="Υπηρεσία 1">
-            <h3>Υπηρεσία 1</h3>
-            <p>Περιγραφή υπηρεσίας 1.</p>
-            <a href="#" class="read-more">Μάθε Περισσότερα</a>
+        <div class="our-services1">
+            <img src="8.jpg" alt="Service 1">
+            <h3 data-lang="artsAdministration">Arts Administration:</h3>
+            <p data-lang="artsAdminDescription">This involves managing the day-to-day operations of performing arts organizations, including budgeting, financial management, human resources, grant writing, and strategic planning.</p>
         </div>
-
-        <div class="service">
-            <img src="service2.jpg" alt="Υπηρεσία 2">
-            <h3>Υπηρεσία 2</h3>
-            <p>Περιγραφή υπηρεσίας 2.</p>
-            <a href="#" class="read-more">Μάθε Περισσότερα</a>
+    
+        <div class="our-services1">
+            <img src="5.jpg" alt="Service 2">
+            <h3 data-lang="productionManagement">Production Management:</h3>
+            <p data-lang="productionManagementDescription">Production managers coordinate all logistical aspects of a performance, including scheduling, venue coordination, stage management, technical requirements, and coordinating with artists and crew.</p>
         </div>
-
-        <div class="service">
-            <img src="service3.jpg" alt="Υπηρεσία 3">
-            <h3>Υπηρεσία 3</h3>
-            <p>Περιγραφή υπηρεσίας 3.</p>
-            <a href="#" class="read-more">Μάθε Περισσότερα</a>
+    
+        <div class="our-services1">
+            <img src="4.jpg" alt="Service 3">
+            <h3 data-lang="marketingAndPromotion">Marketing and Promotion:</h3>
+            <p data-lang="marketingPromotionDescription">Promoting performances and attracting audiences is crucial for the success of any performing arts event. Marketing professionals develop advertising campaigns, create promotional materials, manage social media platforms, and engage with the press to generate awareness and ticket sales.</p>
         </div>
     </section>
+    <section id="our-services">
+<div class="our-services1">
+    <img src="12.jpg" alt="Service 4">
+    <h3 data-lang="technicalSupport1">Technical Support:</h3>
+    <p data-lang="technicalSupportDescription1">Technical staff members, such as lighting designers, sound engineers, set designers, and costume designers, play a crucial role in ensuring the technical aspects of a performance are executed smoothly. They are responsible for creating the visual and auditory elements that enhance the production.</p>
+    <p data-lang="technicalSupportAdditional1">In addition, they collaborate closely with the artistic team to bring creative visions to life through innovative technical solutions.</p>
+</div>
+
+<div class="our-services1">
+    <img src="13.jpg" alt="Service 5">
+    <h3 data-lang="educationAndOutreach">Education and Outreach:</h3>
+    <p data-lang="educationOutreachDescription">Many performing arts organizations engage in educational and outreach programs to foster appreciation for the arts and develop future audiences. This can include workshops, masterclasses, school programs, and community initiatives.</p>
+</div>
+
+<div class="our-services1">
+    <img src="15.jpg" alt="Service 6">
+    <h3 data-lang="fundraisingAndDevelopment">Fundraising and Development:</h3>
+    <p data-lang="fundraisingDevelopmentDescription">Development professionals work to secure funding for performing arts organizations through grant writing, donor cultivation, corporate sponsorships, and fundraising events.</p>
+</div>
+    </section>
+
+
+<!-- Προσθήκη του modal -->
+<div id="modal1" class="modal">
+    <div class="modal1-content">
+        <span class="close-modal" onclick="closeModal1()">&times;</span>
+        <img id="modal1-image" src="" alt="modal Image">
+        <div id="modal1-text">
+            <h3 id="modal1-title"></h3>
+            <p id="modal1-description"></p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
 
     <!-- Προσθέστε άλλες υπηρεσίες κατά βούληση -->
 
     <footer>
         <p>Πνευματικά Δικαιώματα &copy; 2024 | Η Εταιρεία Μας</p>
     </footer>
-    <script src="script.js"></script>
+    <!-- Στο about.html -->
+<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        initializeLanguage();
+    });
+</script>
+
 </body>
 
 </html>
