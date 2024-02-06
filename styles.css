@@ -11,8 +11,9 @@ header {
     color: #fff;
     padding: 1em;
     text-align: center;
-    border-bottom: 1px solid #ccc;
     font-family: 'Arial', sans-serif;
+    margin-bottom: 0; /* Ορίζει το margin-bottom σε μηδέν για να μειώσει την απόσταση */
+    border-bottom: 1px solid #ccc;
     font-size: 150%; /* Μπορείτε να προσαρμόσετε το μέγεθος σύμφωνα με τις ανάγκες σας */
     font-weight: bold; /* Προσθήκη έντασης στο πρώτο γράμμα */
 }
@@ -27,19 +28,25 @@ nav {
 }
 
 #logo-container img {
-    width: 160px; /* Αλλάξτε το πλάτος όπως επιθυμείτε */
-    height: 160px; /* Αλλάξτε το ύψος όπως επιθυμείτε */
+    width: 120px; /* Αλλάξτε το πλάτος όπως επιθυμείτε */
+    height: 120px; /* Αλλάξτε το ύψος όπως επιθυμείτε */
 }
 
 @media only screen and (max-width: 600px) {
+    #logo-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 30%;
+    }
+
     #logo-container img {
         content: url('30.jpg'); /* Εικόνα για μικρά πλάτη οθόνης */
-    }
-    #logo-container img {
         width: 100%; /* Η εικόνα θα καλύπτει όλο τον πλάτος του #logo-container */
         height: auto; /* Αυτόματο ύψος για διατήρηση της αναλογίας */
     }
 }
+
 
 nav ul {
     list-style: none;
@@ -57,7 +64,7 @@ nav a {
     text-decoration: none;
     padding: 10px;
     transition: all 0.3s ease;
-    font-size: 18px; /* Αλλάξτε το μέγεθος της γραμματοσειράς όπως επιθυμείτε */
+    font-size: 22px; /* Αλλάξτε το μέγεθος της γραμματοσειράς όπως επιθυμείτε */
 }
 
 nav a:hover {
@@ -74,6 +81,18 @@ nav a:hover {
     margin: 0 5px; /* Αφήνει απόσταση ανάμεσα στις σημαίες και τα κείμενα */
     cursor: pointer;
 }
+
+@media (max-width: 767px) {
+    /* Εφαρμογή των παρακάτω κανόνων μόνο για οθόνες μικρότερες από 768 pixels (τυπικά για μικρές οθόνες) */
+    .flag {
+        display: none; /* Κρύψτε τα στοιχεία με κλάση .flag */
+    }
+
+    .modal-content .flag {
+        display: inline-block; /* Εμφανίστε τα στοιχεία με κλάση .flag μόνο εντός του modal-content */
+    }
+}
+
 
 #menu-icon {
     font-size: 24px; /* Μέγεθος του εικονιδίου */
@@ -104,6 +123,34 @@ nav a:hover {
         display: block;
         text-align: center;
         margin: 0;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #menu-icon {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    header {
+        background-color: black;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+        margin-bottom: 0;
+        border-bottom: 1px solid #ccc;
+        font-size: 150%;
+        font-weight: bold;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
     }
 }
 
@@ -174,7 +221,7 @@ footer {
 
 .read-more-text:hover {
     text-decoration: underline;
-    color: red;
+    color: rgb(243, 59, 182);;
 }
 /* Προσθέτουμε στυλ για το τμήμα Our Services */
 #our-services {
@@ -191,7 +238,7 @@ font-size: 150%; /* Μπορείτε να προσαρμόσετε το μέγε
 /* Υπογράμμιση της επικεφαλίδας "Our Services" με κόκκινη γραμμή */
 #our-services h2 {
     color: white; /* Χρώμα κειμένου */
-    border-bottom: 2px solid #ff0000; /* Προσθήκη κόκκινης γραμμής κάτω από τον τίτλο */
+    border-bottom: 2px solid rgb(243, 59, 182);; /* Προσθήκη κόκκινης γραμμής κάτω από τον τίτλο */
     display: inline-block; /* Εμφανίζει τον τίτλο ως inline-block για να περιορίσει το πλάτος της γραμμής */
     padding-bottom: 10px; /* Απόσταση μεταξύ του κειμένου και της γραμμής */
     
@@ -252,7 +299,7 @@ font-size: 150%; /* Μπορείτε να προσαρμόσετε το μέγε
 
 .read-more:hover {
     background-color: #555;
-    color: red;
+    color: rgb(243, 59, 182);;
 }
 
 
@@ -272,7 +319,7 @@ font-size: 150%; /* Μπορείτε να προσαρμόσετε το μέγε
 /* Προσθήκη στυλ για το τμήμα Our Work */
 #our-work h2 {
     color: white; /* Χρώμα κειμένου */
-    border-bottom: 2px solid #ff0000; /* Προσθήκη κόκκινης γραμμής κάτω από τον τίτλο */
+    border-bottom: 2px solid rgb(243, 59, 182);; /* Προσθήκη κόκκινης γραμμής κάτω από τον τίτλο */
     display: inline-block; /* Εμφανίζει τον τίτλο ως inline-block για να περιορίσει το πλάτος της γραμμής */
     padding-bottom: 10px; /* Απόσταση μεταξύ του κειμένου και της γραμμής */
 }
@@ -291,7 +338,7 @@ font-size: 150%; /* Μπορείτε να προσαρμόσετε το μέγε
 
 .read-more-text:hover {
     text-decoration: underline;
-    color: red;
+    color: rgb(243, 59, 182);;
 }
 /* Προσθέτουμε στυλ για το τμήμα Contact Us */
 #contact {
@@ -308,7 +355,7 @@ font-size: 150%; /* Μπορείτε να προσαρμόσετε το μέγε
 /* Προσθήκη στυλ για το τμήμα Contact Us */
 #contact h2 {
     color: white; /* Χρώμα κειμένου */
-    border-bottom: 2px solid #ff0000; /* Προσθήκη κόκκινης γραμμής κάτω από τον τίτλο */
+    border-bottom: 2px solid rgb(243, 59, 182);; /* Προσθήκη κόκκινης γραμμής κάτω από τον τίτλο */
     display: inline-block; /* Εμφανίζει τον τίτλο ως inline-block για να περιορίσει το πλάτος της γραμμής */
     padding-bottom: 10px; /* Απόσταση μεταξύ του κειμένου και της γραμμής */
 }
@@ -334,7 +381,7 @@ font-size: 150%; /* Μπορείτε να προσαρμόσετε το μέγε
 
 .contact-button:hover {
     background-color: #555;
-    color: red;
+    color: rgb(243, 59, 182);;
 }
 body {
         margin: 0;
@@ -439,7 +486,7 @@ p {
 }
 .close:hover,
 .close:focus {
-    color: red;
+    color: rgb(243, 59, 182);;
     text-decoration: none;
     cursor: pointer;
 }
@@ -561,7 +608,7 @@ p {
 
 #our-services2 h2 {
     color: white; /* Χρώμα κειμένου */
-    border-bottom: 2px solid #ff0000; /* Προσθήκη κόκκινης γραμμής κάτω από τον τίτλο */
+    border-bottom: 2px solid rgb(243, 59, 182);; /* Προσθήκη κόκκινης γραμμής κάτω από τον τίτλο */
     display: inline-block; /* Εμφανίζει τον τίτλο ως inline-block για να περιορίσει το πλάτος της γραμμής */
     padding-bottom: 10px; /* Απόσταση μεταξύ του κειμένου και της γραμμής */
 }
@@ -618,7 +665,7 @@ p {
     
     .close-modal:hover,
     .close-modal:focus {
-        color: red;
+        color: rgb(243, 59, 182);;
         text-decoration: none;
     }
     #modal1-text {
@@ -773,6 +820,10 @@ p {
         cursor: pointer;
     }
 }
+
+
+
+
 
 
 
