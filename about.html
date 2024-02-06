@@ -6,67 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+       <link rel="icon" href="1.jpg" type="image/jpeg">
 
     <title>About Us</title>
 </head>
 <header>
-    <h1>Art Vibes Productions</h1>
-    <div id="menu-icon">&#9776;</div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Our Services</a></li>
-            <li><a href="our-work.html">Our Work</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
-</header>
+      
 
 
+
+    <!-- Στο index.html -->
+
+   
+   <!-- Υπόλοιπος κώδικας της επικεφαλίδας -->
+
+
+       
+     
+   <div id="menu-icon">&#9776;</div>
+
+
+   
+<nav>
+   <div id="logo-container">
+       <img src="31.jpg" alt="Site Logo">
+   </div>
+   <ul class="nav-list">
+       <li><a href="index.html" data-lang="home">Home</a></li>
+       <li><a href="about.html" data-lang="aboutUs">About Us</a></li>
+       <li><a href="services.html" data-lang="ourServices">Our Services</a></li>
+       <li><a href="our-work.html" data-lang="ourWork">Our Work</a></li>
+       <li><a href="contact.html" data-lang="contactUs">Contact Us</a></li>
+   </ul>
+   <div id="language-selector">
+       <img src="18.png" alt="Greek Flag" onclick="changeLanguage('el')" class="flag">
+       <img src="17.jpg" alt="UK Flag" onclick="changeLanguage('en')" class="flag">
+   </div>
+</nav>
+   </header>
+<style>
+header1 {
+    text-align: center; /* Κεντράρει το περιεχόμενο του header1 */
+    padding-top: 50px; /* Αυξάνει το περιθώριο από πάνω */
+    
+}
+
+header1 img {
+    width: 500px; /* Ορίζει το πλάτος της εικόνας */
+    display: block; /* Καθιστά την εικόνα block για κέντραρισμα */
+    margin: 0 auto; /* Κεντράρει την εικόνα οριζόντια */
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 600px) {
+    header1 img {
+        width: 100%; /* Ορίζει το πλάτος της εικόνας σε 100% για μικρές οθόνες */
+        margin-top: 60px;
+    }
+}
+
+    
+</style>
 <body>
 
-    <header>
+    <header1>
         
         <img src="7.jpg" width="500">
     
-    </header>
+    </header1>
 <!-- Προσθήκη μοντάλ για τους τίτλους των σελίδων -->
 <div id="modal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Our Services</a></li>
-            <li><a href="our-work.html">Our Work</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html" data-lang="home">Home</a></li>
+            <li><a href="about.html" data-lang="aboutUs">About Us</a></li>
+            <li><a href="services.html" data-lang="ourServices">Our Services</a></li>
+            <li><a href="our-work.html" data-lang="ourWork">Our Work</a></li>
+            <li><a href="contact.html" data-lang="contactUs">Contact Us</a></li>
         </ul>
+           <div id="language-selector">
+        <img src="18.png" alt="Greek Flag" onclick="changeLanguage('el')" class="flag">
+        <img src="17.jpg" alt="UK Flag" onclick="changeLanguage('en')" class="flag">
+    </div>
     </div>
 </div>
-    <section id="about">
-        <h2 id="about-title">About Us</h2>
-        <p id="about-text">Art Vibes Productions is a creative production company that aims to bring artistry, innovation, and
+<section id="about">
+    <h2 id="about-title" data-lang="about-title">About Us</h2>
+    <p id="about-text" data-lang="about-text">Art Vibes Productions is a creative production company that aims to bring artistry, innovation, and
             inspiration to the world of media and entertainment. Our philosophy is rooted in the belief that
             artistic expression has the power to evoke emotions, provoke thoughts, and ignite positive change.</p>
             
-            <p id="about-text"> At Art Vibes Productions, we are passionate about the power of storytelling and the impact it can
+            <p id="about-text" data-lang="about-text1"> At Art Vibes Productions, we are passionate about the power of storytelling and the impact it can
             have on individuals and society as a whole. We strive to create content that resonates with people
             on a deep level, pushing boundaries and challenging conventional norms. Our goal is to produce
             visually stunning, intellectually stimulating, and emotionally engaging work that leaves a lasting
             impression.</p>
             
-            <p id="about-text">As a production company, we specialize in various forms of media, including film, television, digital
+            <p id="about-text" data-lang="about-text2">As a production company, we specialize in various forms of media, including film, television, digital
             content, and immersive experiences. We collaborate with talented artists, writers, directors, and
             technicians to bring our visions to life. Our team is dedicated to excellence and committed to
             maintaining the highest standards of quality in every project we undertake.</p>
             
-            <p id="about-text">We value creativity, authenticity, and originality in all aspects of our work. We believe in fostering an
+            <p id="about-text" data-lang="about-text3">We value creativity, authenticity, and originality in all aspects of our work. We believe in fostering an
             environment that encourages innovation and nurtures the talents of our team members. By
             embracing diversity and embracing different perspectives, we strive to create content that reflects
             the richness and complexity of the world we live in.</p>
             
-            <p id="about-text">Art Vibes Productions is dedicated to creating art that moves, enlightens, and entertains. We are
+            <p id="about-text" data-lang="about-text4">Art Vibes Productions is dedicated to creating art that moves, enlightens, and entertains. We are
             driven by a deep passion for storytelling and a commitment to pushing creative boundaries, and we
             look forward to sharing our unique vision with audiences worldwide.</p></p>
     </section>
@@ -75,8 +122,14 @@
 
    
 
-    <script src="script.js"></script>
+    <!-- Στο about.html -->
+<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        initializeLanguage();
+    });
+</script>
+
 </body>
 
 </html>
-
