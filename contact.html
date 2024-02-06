@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+   
+    <style>
+        /* Προσθέστε τα στυλ CSS σας εδώ */
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Art Vibes Productions</h1>
+        <div id="menu-icon">&#9776;</div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#our-services">Our Services</a></li>
+                <li><a href="#our-work">Our Work</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+<!-- Προσθήκη μοντάλ για τους τίτλους των σελίδων -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="our-work.html">Our Work</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+</div>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Για περαιτέρω πληροφορίες ή ερωτήσεις, επικοινωνήστε μαζί μας:</p>
+        <p>Email: info@company.com</p>
+        <p>Τηλέφωνο: +30 123 456 789</p>
+
+        <body>
+
+            <div class="contact-form">
+               
+                <form action="process_form.php" method="post">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+            
+                   
+            </div>
+    <footer>
+        <p>Πνευματικά Δικαιώματα &copy; 2024 | Η Εταιρεία Μας</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+

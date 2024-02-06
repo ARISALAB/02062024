@@ -1,0 +1,779 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+
+header {
+    background-color: black;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    font-family: 'Arial', sans-serif;
+    font-size: 150%; /* Μπορείτε να προσαρμόσετε το μέγεθος σύμφωνα με τις ανάγκες σας */
+    font-weight: bold; /* Προσθήκη έντασης στο πρώτο γράμμα */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+#logo-container {
+    margin-right: auto; /* Μετακινεί το λογότυπο προς τα αριστερά (αρχή) */
+}
+
+#logo-container img {
+    width: 160px; /* Αλλάξτε το πλάτος όπως επιθυμείτε */
+    height: 160px; /* Αλλάξτε το ύψος όπως επιθυμείτε */
+}
+
+@media only screen and (max-width: 600px) {
+    #logo-container img {
+        content: url('30.jpg'); /* Εικόνα για μικρά πλάτη οθόνης */
+    }
+    #logo-container img {
+        width: 100%; /* Η εικόνα θα καλύπτει όλο τον πλάτος του #logo-container */
+        height: auto; /* Αυτόματο ύψος για διατήρηση της αναλογίας */
+    }
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.3s ease;
+    font-size: 18px; /* Αλλάξτε το μέγεθος της γραμματοσειράς όπως επιθυμείτε */
+}
+
+nav a:hover {
+    color: rgb(243, 59, 182);
+}
+
+#language-selector {
+    margin-left: auto; /* Μετακινεί τις σημαίες προς τα δεξιά (τέλος) */
+    display: flex;
+    align-items: center;
+}
+
+.flag {
+    margin: 0 5px; /* Αφήνει απόσταση ανάμεσα στις σημαίες και τα κείμενα */
+    cursor: pointer;
+}
+
+#menu-icon {
+    font-size: 24px; /* Μέγεθος του εικονιδίου */
+    cursor: pointer;
+    display: none; /* Αρχικά κρύψτε το εικονίδιο για μεγαλύτερες οθόνες */
+}
+
+/* Προσθήκη μενού πτυσσόμενου για μικρές οθόνες */
+@media screen and (max-width: 600px) {
+    #menu-icon {
+        display: block; /* Εμφανίστε το εικονίδιο για μικρές οθόνες */
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+    }
+
+    nav ul.show {
+        display: block;
+    }
+
+    nav li {
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#home {
+    background-color:black;
+    color: #fff;
+}
+
+/* Προσθέτουμε στυλ για την εικόνα στον νέο τομέα */
+#image-section {
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+#image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 00px; /* Προσθέστε κάθε στυλ που επιθυμείτε για την εικόνα */
+    
+}
+/* Προσθέτουμε στυλ για το τμήμα About Us */
+#about {
+    background-color: black;
+    color: white;
+    text-align: left;
+        padding: 20px; 
+   
+}
+#about h2::first-letter {
+    font-size: 150%; /* Μπορείτε να προσαρμόσετε το μέγεθος σύμφωνα με τις ανάγκες σας */
+    font-weight: bold; /* Προσθήκη έντασης στο πρώτο γράμμα */
+    font-family: 'Arial', sans-serif;
+}
+
+
+#about h2 {
+    color: white; /* Χρώμα κειμένου */
+    border-bottom: 2px solid rgb(243, 59, 182);; /* Προσθήκη κόκκινης γραμμής κάτω από τον τίτλο */
+    display: inline-block; /* Εμφανίζει τον τίτλο ως inline-block για να περιορίσει το πλάτος της γραμμής */
+    padding-bottom: 10px; /* Απόσταση μεταξύ του κειμένου και της γραμμής */
+}
+
+#about p {
+    margin-top: 10px;
+}
+
+.read-more-text {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more-text:hover {
+    text-decoration: underline;
+    color: red;
+}
+/* Προσθέτουμε στυλ για το τμήμα Our Services */
+#our-services {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+#our-services h2::first-letter {
+font-size: 150%; /* Μπορείτε να προσαρμόσετε το μέγεθος σύμφωνα με τις ανάγκες σας */
+    font-weight: bold; /* Προσθήκη έντασης στο πρώτο γράμμα */
+    font-family: 'Arial', sans-serif;
+}
+/* Υπογράμμιση της επικεφαλίδας "Our Services" με κόκκινη γραμμή */
+#our-services h2 {
+    color: white; /* Χρώμα κειμένου */
+    border-bottom: 2px solid #ff0000; /* Προσθήκη κόκκινης γραμμής κάτω από τον τίτλο */
+    display: inline-block; /* Εμφανίζει τον τίτλο ως inline-block για να περιορίσει το πλάτος της γραμμής */
+    padding-bottom: 10px; /* Απόσταση μεταξύ του κειμένου και της γραμμής */
+    
+}
+
+/* Στυλ για το τμήμα "service-photos" */
+#service-photos {
+    padding: 20px; /* Προσθήκη padding για να διαχωριστεί το περιεχόμενο από τα άκρα του container */
+    background-color: black;
+    color: white;
+}
+
+.service {
+    margin-top: 20px;
+    display: inline-block;
+    width: 30%;
+    margin-right: 2%;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: top; /* Προσθήκη κατακόρυφης ευθυγράμμισης στην κορυφή */
+}
+
+.service img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    display: block; /* Καθιστά την εικόνα block για να μπορεί να εφαρμοστεί text-align: center; */
+    margin: 0 auto; /* Κεντράρει την εικόνα με βάση τον άξονα X */
+}
+
+.service p,
+#our-work p {
+    max-width: 100%;
+    text-align: center;
+    text-indent: 00px; /* Προσθέτει μια εσοχή 20px στην αρχή της παραγράφου */
+}
+
+.service p {
+    margin-top: 10px;
+    max-height: 80px; /* Ορίζει το μέγιστο ύψος του κειμένου */
+    overflow: hidden; /* Απρόσκοπτη εμφάνιση του κειμένου μέχρι το μέγιστο ύψος */
+    text-overflow: ellipsis; /* Προσθήκη τριών τελείων στο τέλος του κειμένου αν ξεπεραστεί το μέγιστο ύψος */
+}
+
+
+/* Ανασχηματίζουμε το κουμπί "Δες Περισσότερα" για να είναι στο κέντρο */
+.read-more {
+    display: block; /* Εμφάνιση ως block για ευκολότερο κέντραρισμα */
+    margin: 10px auto; /* Αυτόματο κέντραρισμα στον άξονα X */
+    max-width: 85px; /* Ορίζει μέγιστο πλάτος για το κουμπί */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center; /* Κείμενο στο κέντρο του κουμπιού */
+}
+
+.read-more:hover {
+    background-color: #555;
+    color: red;
+}
+
+
+
+/* Προσθέτουμε στυλ για το τμήμα Our Work */
+#our-work {
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 20px;
+}
+#our-work h2::first-letter {
+    font-size: 150%; /* Μπορείτε να προσαρμόσετε το μέγεθος σύμφωνα με τις ανάγκες σας */
+        font-weight: bold; /* Προσθήκη έντασης στο πρώτο γράμμα */
+        font-family: 'Arial', sans-serif;
+    }
+/* Προσθήκη στυλ για το τμήμα Our Work */
+#our-work h2 {
+    color: white; /* Χρώμα κειμένου */
+    border-bottom: 2px solid #ff0000; /* Προσθήκη κόκκινης γραμμής κάτω από τον τίτλο */
+    display: inline-block; /* Εμφανίζει τον τίτλο ως inline-block για να περιορίσει το πλάτος της γραμμής */
+    padding-bottom: 10px; /* Απόσταση μεταξύ του κειμένου και της γραμμής */
+}
+
+#our-work p {
+    margin-top: 10px;
+}
+
+
+/* Στυλ για το Read More ως κείμενο και όχι κουμπί */
+.read-more-text {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more-text:hover {
+    text-decoration: underline;
+    color: red;
+}
+/* Προσθέτουμε στυλ για το τμήμα Contact Us */
+#contact {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+#contact h2::first-letter {
+    font-size: 150%; /* Μπορείτε να προσαρμόσετε το μέγεθος σύμφωνα με τις ανάγκες σας */
+        font-weight: bold; /* Προσθήκη έντασης στο πρώτο γράμμα */
+        font-family: 'Arial', sans-serif;
+    }
+/* Προσθήκη στυλ για το τμήμα Contact Us */
+#contact h2 {
+    color: white; /* Χρώμα κειμένου */
+    border-bottom: 2px solid #ff0000; /* Προσθήκη κόκκινης γραμμής κάτω από τον τίτλο */
+    display: inline-block; /* Εμφανίζει τον τίτλο ως inline-block για να περιορίσει το πλάτος της γραμμής */
+    padding-bottom: 10px; /* Απόσταση μεταξύ του κειμένου και της γραμμής */
+}
+
+#contact p {
+    margin-top: 10px;
+}
+
+#contact p {
+    margin-top: 10px;
+}
+
+/* Στυλ για το Contact Us κουμπί */
+.contact-button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.contact-button:hover {
+    background-color: #555;
+    color: red;
+}
+body {
+        margin: 0;
+    padding: 0;
+    margin-left: 10px; /* Προσθήκη περιθωρίου αριστερά */
+    margin-right: 10px; /* Προσθήκη περιθωρίου δεξιά */
+}
+
+/* Κάνουμε τα περιεχόμενα των τμημάτων να προσαρμόζονται σε διάφορα μεγέθη οθόνης */
+section, #image-section, #about, #our-services, #service-photos, #our-work, #contact {
+    max-width: 1200px; /* Ορίζει ένα μέγιστο πλάτος για τα τμήματα */
+    margin: 0 auto; /* Κεντράρει τα τμήματα στη σελίδα */
+    box-sizing: border-box;
+}
+
+/* Προσθέτουμε στυλ για το τμήμα About Us */
+#about {
+    max-width: 800px; /* Ορίζει ένα μέγιστο πλάτος για το τμήμα About Us */
+}
+
+/* Προσθέτουμε στυλ για το τμήμα Our Services */
+#our-services {
+    max-width: 1200px; /* Ορίζει ένα μέγιστο πλάτος για το τμήμα Our Services */
+}
+
+/* Προσθέτουμε στυλ για το τμήμα Our Work */
+#our-work {
+    max-width: 800px; /* Ορίζει ένα μέγιστο πλάτος για το τμήμα Our Work */
+}
+
+/* Προσθέτουμε στυλ για το τμήμα Contact Us */
+#contact {
+    max-width: 800px; /* Ορίζει ένα μέγιστο πλάτος για το τμήμα Contact Us */
+}
+
+/* Προσθήκη στυλ για το κεντρικό μέρος του header */
+header {
+    max-width: 1200px; /* Ορίζει ένα μέγιστο πλάτος για το header */
+    margin: 0 auto; /* Κεντράρει το header στη σελίδα */
+}
+
+/* Προσθήκη στυλ για το κεντρικό μέρος του footer */
+footer {
+    max-width: 1200px; /* Ορίζει ένα μέγιστο πλάτος για το footer */
+    margin: 0 auto; /* Κεντράρει το footer στη σελίδα */
+}
+
+/* Κάνουμε τις εικόνες να προσαρμόζονται στο πλάτος τους και να διατηρούν την αναλογία διαστάσεών τους */
+img {
+    max-width: 100%;
+    height: auto;
+}
+h2 {
+    font-size: 2em; /* Μπορείτε να προσαρμόσετε το μέγεθος όπως επιθυμείτε */
+}
+header h1 {
+    font-size: 2.5em; /* Προσαρμόστε το μέγεθος όπως επιθυμείτε */
+}
+p {
+    font-size: 1.2em; /* Προσαρμόστε το μέγεθος όπως επιθυμείτε */
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    position: fixed; /* Αλλαγή σε position: fixed */
+    right: 0; /* Αλλαγή σε right: 0 */
+    top: 0;
+    padding: 30px;
+    width: 60%;
+    height: 70%;
+    color: #000;
+    border-radius: 10px;
+    font-size: 1,7em; /* Νέο μέγεθος γραμματοσειράς */
+    line-height: 4.6; /* Αυξημένη απόσταση μεταξύ των γραμμών */
+}
+/* Αφαίρεση μαύρων βούλων από τους τίτλους */
+.modal-content ul {
+    list-style-type: none;
+    padding: 0;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    
+}
+/* Αφαιρεμένες βούλες από την κλάση .close */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Στύλ για τίτλους που χωρίζονται με γραμμή */
+.modal-content h2 {
+    border-bottom: 20px solid #080808;
+    padding-bottom: 80px;
+    margin-bottom: 100px;
+}
+
+#about-text {
+    text-align: justify; /* Πλήρης στίχιση του κειμένου */
+    display: inline-block; /* Εξασφαλίζει την πλήρη στίχιση του κειμένου */
+   
+    text-indent: 50px; /* Ρύθμιση περιθωρίου από τα αριστερά */
+}
+
+#about-text p {
+    display: inline-block; /* Εξασφαλίζει την πλήρη στίχιση του κειμένου */
+    
+        text-indent: 50px; /* Ρυθμίστε την τιμή σύμφωνα με τις ανάγκες σας */
+    
+    
+
+}
+.work {
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.work:hover img {
+    transform: scale(0.9);
+}
+/* Προσθέστε τον παρακάτω κώδικα CSS */
+.work-item {
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-out;
+    display: flex;
+    flex-direction: column; /* Καθορίζει την κατεύθυνση των στοιχείων ως στήλη */
+}
+
+.zoom {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-out;
+    animation: zoomIn 1s ease-out; /* Προσθέστε το animation για κίνηση */
+}
+
+.description {
+    padding-top: 20px; /* Προσθέστε κενό από τοπ μέρος του κειμένου */
+    text-align: left;
+    font-size: auto;
+    line-height: 1.4;
+    .description p {
+        
+        text-indent: 20px; /* Ρύθμιση περιθωρίου από το αριστερό άκρο της παραγράφου */
+        margin-bottom: 20px; /* Προσθήκη κενού κάτω από κάθε παράγραφο για διαχωρισμό */
+    }
+    
+}
+
+/* Keyframe animation για κίνηση εικόνας */
+@keyframes zoomIn {
+    from {
+        transform: translateX(100%); /* Αρχική θέση εκτός ορατής περιοχής (δεξιά) */
+    }
+    to {
+        transform: translateX(0); /* Τελική θέση, χωρίς μετατόπιση (ορατή περιοχή) */
+    }
+}
+
+
+#our-services {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap; /* Προσθήκη γραμμής για να αναδιατάξει τα παιδιά όταν δεν χωράνε οριζόντια */
+}
+
+
+.our-services1 {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    width: 30%;
+    margin: 10px;
+    text-indent: 0px;
+}
+
+.our-services1 img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-direction: column; /* Προσθήκη αυτού του κανόνα */
+}
+
+
+.our-services1 h3 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.our-services1 p {
+    margin-bottom: 20px;
+    flex-grow: 1; /* Εξασφαλίζει ότι το κείμενο θα καταλαμβάνει τον διαθέσιμο χώρο */
+}
+
+#our-services2 {
+    text-align: center;
+}
+
+#our-services2 h2 {
+    color: white; /* Χρώμα κειμένου */
+    border-bottom: 2px solid #ff0000; /* Προσθήκη κόκκινης γραμμής κάτω από τον τίτλο */
+    display: inline-block; /* Εμφανίζει τον τίτλο ως inline-block για να περιορίσει το πλάτος της γραμμής */
+    padding-bottom: 10px; /* Απόσταση μεταξύ του κειμένου και της γραμμής */
+}
+#our-services2 h2::first-letter {
+    font-size: 150%; /* Μπορείτε να προσαρμόσετε το μέγεθος σύμφωνα με τις ανάγκες σας */
+    font-weight: bold; /* Προσθήκη έντασης στο πρώτο γράμμα */
+    font-family: 'Arial', sans-serif;
+}
+
+    #modal1 {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); /* Κεντράρισμα του modal στο κέντρο της σελίδας */
+        width: 60%;
+        height: 100vh; /* Καλύπτει ολόκληρο το ύψος της οθόνης */
+        overflow: auto;
+        background-color: rgba(7, 7, 7, 0.952);
+       
+    }
+    
+    
+    #modal1-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 30px;
+        width: 60%;
+        height: 80%; /* Αντικατάσταση του ύψους με ποσοστό για να απλωθεί σε ολόκληρη την σελίδα */
+        color: #000;
+        border-radius: 10px;
+        overflow: auto; /* Προσθήκη scroll αν χρειαστεί */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+    
+    #modal1-content img {
+        width: 100%;
+        border-radius: 50px;
+    }
+    
+    .close-modal {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .close-modal:hover,
+    .close-modal:focus {
+        color: red;
+        text-decoration: none;
+    }
+    #modal1-text {
+        margin-top: 20px;
+        text-align: left;
+        color: white;
+        font-size: 24px;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+    #modal1-title {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 10px;
+        color: rgb(254, 254, 255);
+        border-bottom: 2px solid red;
+    /* Χρησιμοποιείται για να περιορίσει το πλάτος του inline element */
+    padding-bottom: 10px; ;
+    
+    }
+    
+ #modal1-description {
+        margin-top: 10px;
+        text-align: left;
+        /* Χρησιμοποίηση justify μόνο στο τέλος κάθε γραμμής */
+        color: white;
+        font-size: 18px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+
+    #modal1-image {
+        max-width: 80%; /* Καθορίζει το μέγιστο πλάτος της εικόνας ως 100% του container */
+        height: auto;
+        display: block;
+        margin: 0 auto; 
+        margin-top: 80px;/* Αυτόματο ύψος για διατήρηση της αναλογίας εικόνας */
+    }
+    @media only screen and (max-width: 600px) {
+        #modal1 {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+     
+    #our-services2 p {
+        display: none; /* Αρχικά κρύβει τα κείμενα */
+    }
+    
+    #modal1.show #modal1-text p {
+        display: block; /* Εμφανίζει τα κείμενα μόνο όταν το modal1 έχει την κλάση show */
+    }
+    
+    
+    
+    
+    /* Στο styles.css */
+#language-selector {
+    display: flex;
+    align-items: center;
+}
+
+
+.flag {
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+/* Στο styles.css */
+
+@media (max-width: 768px) {
+    #service-photos {
+        padding: 10px; /* Προσαρμογή του padding για μικρότερες οθόνες */
+    }
+
+    .service {
+        width: 100%; /* Καταχώρηση του πλάτους της υπηρεσίας σε 100% σε μικρότερες οθόνες */
+        margin-right: 0; /* Αφαίρεση του δεξιού περιθωρίου για να μην υπάρχει κενό μεταξύ των υπηρεσιών */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #our-services .our-services1 {
+        width: 100%; /* Κατακόρυφη εμφάνιση των υπηρεσιών σε μικρές οθόνες */
+        margin: 10px 0; /* Προσθήκη αποστάσεων γύρω από τις υπηρεσίες */
+    }
+}
+
+/* Προσθέτουμε στυλ για το τμήμα About Us */
+#about {
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 20px;
+}
+
+/* Προσθέτουμε στυλ για το τμήμα Our Services */
+#our-services {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Προσθέτουμε στυλ για το τμήμα Our Work */
+#our-work {
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 20px;
+}
+
+/* Προσθέτουμε στυλ για το τμήμα Contact Us */
+#contact {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Media query για να αλλάξουμε το text-align όταν το πλάτος της οθόνης είναι μικρότερο από 600px */
+@media screen and (max-width: 600px) {
+    #about, #our-services, #our-work, #contact {
+        text-align: center;
+    }
+}
+#animated-gif {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+/* Εμφανίζει το εικονίδιο μενού μόνο όταν η οθόνη είναι πιο στενή */
+@media only screen and (max-width: 768px) {
+    #menu-icon {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+}
+
+
+
+

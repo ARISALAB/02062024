@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Vibes Production</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="icon" href="1.jpg" type="image/jpeg">
+
+
+
+</head>
+
+<body>
+    <header>
+      
+
+
+
+     <!-- Στο index.html -->
+
+    
+    <!-- Υπόλοιπος κώδικας της επικεφαλίδας -->
+
+
+        
+      
+    <div id="menu-icon">&#9776;</div>
+
+ 
+    
+<nav>
+    <div id="logo-container">
+        <img src="31.jpg" alt="Site Logo">
+    </div>
+    <ul class="nav-list">
+        <li><a href="index.html" data-lang="home">Home</a></li>
+        <li><a href="about.html" data-lang="aboutUs">About Us</a></li>
+        <li><a href="services.html" data-lang="ourServices">Our Services</a></li>
+        <li><a href="our-work.html" data-lang="ourWork">Our Work</a></li>
+        <li><a href="contact.html" data-lang="contactUs">Contact Us</a></li>
+    </ul>
+    <div id="language-selector">
+        <img src="18.png" alt="Greek Flag" onclick="changeLanguage('el')" class="flag">
+        <img src="17.jpg" alt="UK Flag" onclick="changeLanguage('en')" class="flag">
+    </div>
+</nav>
+    </header>
+<!-- Προσθήκη μοντάλ για τους τίτλους των σελίδων -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <ul>
+            <li><a href="index.html" data-lang="home">Home</a></li>
+            <li><a href="about.html" data-lang="aboutUs">About Us</a></li>
+            <li><a href="services.html" data-lang="ourServices">Our Services</a></li>
+            <li><a href="our-work.html" data-lang="ourWork">Our Work</a></li>
+            <li><a href="contact.html" data-lang="contactUs">Contact Us</a></li>
+        </ul>
+           <div id="language-selector">
+        <img src="18.png" alt="Greek Flag" onclick="changeLanguage('el')" class="flag">
+        <img src="17.jpg" alt="UK Flag" onclick="changeLanguage('en')" class="flag">
+    </div>
+    </div>
+</div>
+<section id="home">
+    <h2 data-lang="welcome">Welcome to Art Vibes Productions</h2>
+    <p data-lang="intro">Your source for creative and artistic content.</p>
+</section>
+    
+    <section id="image-section">
+        <img src="2.jpg" alt="Art Vibes Image">
+    </section>
+    <section id="about">
+        <h2 data-lang="aboutUs">About Us</h2>
+        <p data-lang="aboutDescription">We are a passionate team dedicated to creating unique and inspiring art. Explore more about our journey...</p>
+        <p> <a href="about.html" class="read-more-text" data-lang="readMore">Read More</a></p>
+    </section>
+    <section id="our-services">
+        <h2 data-lang="ourServices">Our Services</h2>
+    </section>
+<!-- Στο index.html -->
+<section id="service-photos">
+    
+
+    <!-- Προσθήκη μετάφρασης για κάθε υπηρεσία -->
+    <div class="service">
+        <img src="4.jpg" alt="Service 1">
+        <p data-lang="artsAdministration">Arts Administration:</p> 
+        <p data-lang="artsAdministrationDescription">This involves managing the day-to-day operations of performing arts organizations, including budgeting, financial management, human resources, grant writing, and strategic planning...</p>
+    </div>
+
+    <div class="service">
+        <img src="5.jpg" alt="Service 2">
+        <p data-lang="productionManagement">Production Management:</p>
+        <p data-lang="productionManagementDescription">Production managers coordinate all logistical aspects of a performance, including scheduling, venue coordination, stage management, technical requirements, and coordinating with artists and crew...</p>
+    </div>
+
+    <div class="service">
+        <img src="4.jpg" alt="Service 3">
+        <p data-lang="technicalSupport">Marketing and Promotion:</p>
+        <p data-lang="technicalSupportDescription">Promoting performances and attracting audiences is crucial for the success of any performing arts event...</p>
+    </div>
+
+<!-- Στο services.html -->
+<a href="services.html" class="read-more" data-lang="readMore">Read More</a>
+
+
+</section>
+
+
+
+  <!-- Στο index.html -->
+<section id="our-work">
+    <h2 data-lang="ourWork">Our Work</h2>
+    <p data-lang="discoverProjects">Discover our amazing projects and see how we bring ideas to life.</p>
+    <p><a href="our-work.html" class="read-more-text" data-lang="readMore">Read More</a></p>
+</section>
+
+   <!-- Στο index.html -->
+<section id="contact">
+    <h2 data-lang="contactUs">Contact Us</h2>
+    <p data-lang="getInTouch">Get in touch with us and let's create something amazing together.</p>
+    <p><a href="contact.html" class="contact-button" data-lang="contactUsButton">Contact Us</a></p>
+</section>
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
