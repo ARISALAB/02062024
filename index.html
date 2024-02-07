@@ -44,15 +44,17 @@
 
 
 #image-section {
-            width: 100%;
-            overflow: hidden;
-        }
+    position: relative; /* Καθορίζει τον γονικό container ως σημείο αναφοράς για τα παιδιά του */
+    width: 100%;
+    overflow: hidden;
+}
 
-        #image-carousel {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            margin: 0 -200px; /* Προσθήκη περιθωρίων στις δύο πλευρές */
-        }
+#image-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin: 0 -200px; /* Προσθήκη περιθωρίων στις δύο πλευρές */
+    z-index: 0; /* Ορίζει τη θέση στη στοίβα, χαμηλότερο από τα βελάκια */
+}
 
         .carousel-item {
             min-width: 100%;
@@ -69,18 +71,19 @@
             height: auto;
         }
         #prev, #next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 24px;
-            cursor: pointer;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border: none;
-            outline: none;
-            transition: background-color 0.3s;
-        }
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    z-index: 1; /* Ορίζει τη θέση στη στοίβα */
+}
 
         #prev:hover, #next:hover {
             background-color: rgba(0, 0, 0, 0.8);
