@@ -7,10 +7,12 @@
     <title>Art Vibes Production</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link rel="icon" href="31.jpg" type="image/jpeg">
+       <link rel="icon" href="1.jpg" type="image/jpeg">
 
 
 
@@ -40,6 +42,69 @@
 }
 
 
+
+#image-section {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #image-carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            margin: 0 -200px; /* Προσθήκη περιθωρίων στις δύο πλευρές */
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            margin: 0 10px;
+            overflow: hidden;
+            height: 450px; /* Καθορίζετε εδώ το σταθερό ύψος των εικόνων */
+            display: flex;
+            align-items: center; /* Κεντράρει την εικόνα κατακόρυφα μέσα στον .carousel-item */
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+        #prev, #next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+
+        #prev:hover, #next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
+        #prev:hover,
+#next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#prev:hover {
+    left: 5px; /* Μικρότερη απόσταση από το αριστερό άκρο κατά το hover */
+}
+
+#next:hover {
+    right: 5px; /* Μικρότερη απόσταση από το δεξί άκρο κατά το hover */
+}
         </style>
       
     <div id="menu-icon">&#9776;</div>
@@ -80,17 +145,31 @@
     </div>
     </div>
 </div>
-<section id="home">
-    <h2 data-lang="welcome">Welcome to Art Vibes Productions</h2>
-    <p data-lang="intro">Your source for creative and artistic content</p>
+<section id="image-section">
+    <button id="prev" onclick="prevSlide()">&#10094;</button>
+    <div id="image-carousel">
+        <div class="carousel-item"><img src="100.jpg" alt="Art Vibes Image 1"></div>
+        <div class="carousel-item"><img src="101.jpg" alt="Art Vibes Image 2"></div>
+        <div class="carousel-item"><img src="102.jpg" alt="Art Vibes Image 3"></div>
+        <div class="carousel-item"><img src="103.jpg" alt="Art Vibes Image 3"></div>
+        <div class="carousel-item"><img src="104.jpg" alt="Art Vibes Image 3"></div>
+        <div class="carousel-item"><img src="105.jpg" alt="Art Vibes Image 3"></div>
+        <div class="carousel-item"><img src="106.jpg" alt="Art Vibes Image 3"></div>
+        <div class="carousel-item"><img src="107.jpg" alt="Art Vibes Image 3"></div>
+        <div class="carousel-item"><img src="108.jpg" alt="Art Vibes Image 3"></div>
+        <div class="carousel-item"><img src="110.jpg" alt="Art Vibes Image 3"></div>
+
+    </div>
+    <button id="next" onclick="nextSlide()">&#10095;</button>
+
 </section>
+
     
-   <section id="image-section">
-    <img src="2.gif" alt="Art Vibes Image" width="500" height="100">
-</section>
+
+
     <section id="about">
         <h2 data-lang="aboutUs">About Us</h2>
-        <p data-lang="aboutDescription">We are a passionate team dedicated to creating unique and inspiring art. Explore more about our journey</p>
+        <p data-lang="aboutDescription">We are a passionate team dedicated to creating unique and inspiring art. Explore more about our journey...</p>
         <p> <a href="about.html" class="read-more-text" data-lang="readMore">Read More</a></p>
     </section>
     <section id="our-services">
@@ -108,13 +187,13 @@
     </div>
 
     <div class="service">
-        <img src="16.jpg" alt="Service 2">
+        <img src="5.jpg" alt="Service 2">
         <p data-lang="productionManagement">Production Management:</p>
         <p data-lang="productionManagementDescription">Production managers coordinate all logistical aspects of a performance, including scheduling, venue coordination, stage management, technical requirements, and coordinating with artists and crew...</p>
     </div>
 
     <div class="service">
-        <img src="15.jpg" alt="Service 3">
+        <img src="4.jpg" alt="Service 3">
         <p data-lang="technicalSupport">Marketing and Promotion:</p>
         <p data-lang="technicalSupportDescription">Promoting performances and attracting audiences is crucial for the success of any performing arts event...</p>
     </div>
@@ -141,7 +220,57 @@
     <p><a href="contact.html" class="contact-button" data-lang="contactUsButton">Contact Us</a></p>
 </section>
 
-    
+<script>
+    let currentIndex = 0;
+    const carousel = document.getElementById('image-carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+    const intervalTime = 5000;
+    let autoScrollInterval;
+
+    function startCarousel() {
+        autoScrollInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateCarousel();
+        }, intervalTime);
+    }
+
+    document.getElementById('image-section').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
+        restartAutoScroll();
+    });
+
+    function updateCarousel() {
+        const newTransformValue = -currentIndex * 100 + '%';
+        carousel.style.transform = 'translateX(' + newTransformValue + ')';
+    }
+
+    function nextSlide() {
+        stopAutoScroll();
+        currentIndex = (currentIndex + 0) % totalItems;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        stopAutoScroll();
+        currentIndex = (currentIndex - 2 + totalItems) % totalItems;
+        updateCarousel();
+    }
+
+    function restartAutoScroll() {
+        clearInterval(autoScrollInterval);
+        startCarousel();
+    }
+
+    function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+    }
+
+    startCarousel();
+</script>
+
+
     <script src="script.js"></script>
 </body>
 
