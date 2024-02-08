@@ -704,7 +704,7 @@ p {
         text-align: justify;
         /* Χρησιμοποίηση justify μόνο στο τέλος κάθε γραμμής */
         color: white;
-      
+       font-size:16px;
 
     }
     
