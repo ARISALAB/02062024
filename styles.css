@@ -130,7 +130,7 @@ nav a:hover {
         display: block;
         position: fixed;
         top: 10px;
-        left: 350px;
+        left: 300px;
         font-size: 24px;
         cursor: pointer;
         z-index: 1001;
