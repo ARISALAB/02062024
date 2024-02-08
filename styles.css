@@ -622,7 +622,7 @@ p {
     padding-bottom: 10px; /* Απόσταση μεταξύ του κειμένου και της γραμμής */
 }
 #our-services2 h2::first-letter {
-    font-size: 150%; /* Μπορείτε να προσαρμόσετε το μέγεθος σύμφωνα με τις ανάγκες σας */
+    font-size: 120%; /* Μπορείτε να προσαρμόσετε το μέγεθος σύμφωνα με τις ανάγκες σας */
     font-weight: bold; /* Προσθήκη έντασης στο πρώτο γράμμα */
     font-family: 'Arial', sans-serif;
 }
@@ -704,7 +704,7 @@ p {
         text-align: justify;
         /* Χρησιμοποίηση justify μόνο στο τέλος κάθε γραμμής */
         color: white;
-        font-size: 14px;
+      
 
     }
     
