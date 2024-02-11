@@ -124,52 +124,6 @@
       display: none;
     }
 
-#image-carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Απαλή μετάβαση */
-    margin: 0 -200px;
-    z-index: 0;
-}
-
-.carousel-item {
-    transition: opacity 0.5s ease-in-out; /* Απαλή μετάβαση στη διαφάνεια */
-    min-width: 100%;
-    box-sizing: border-box;
-    margin: 0 10px;
-    overflow: hidden;
-    height: 450px;
-    display: flex;
-    align-items: center;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s ease-in-out; /* Απαλή μετάβαση και στην εικόνα */
-}
-
-#prev, #next {
-    /* Αφαιρέστε το background-color, καθώς η μετάβαση θα είναι στο χρώμα του κειμένου */
-    color: white;
-    padding: 10px;
-    border: none;
-    outline: none;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-#prev:hover, #next:hover {
-    color: black; /* Αλλαγή χρώματος κατά το hover */
-}
-
-#prev:hover {
-    left: 5px;
-}
-
-#next:hover {
-    right: 5px;
-}
 
             
         </style>
