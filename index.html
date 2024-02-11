@@ -51,26 +51,34 @@
 
 #image-carousel {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    margin: 0 -200px; /* Προσθήκη περιθωρίων στις δύο πλευρές */
-    z-index: 0; /* Ορίζει τη θέση στη στοίβα, χαμηλότερο από τα βελάκια */
+    transition: transform 1s ease-in-out; /* Αλλαγή του χρόνου μετάβασης σε 1 δευτερόλεπτο με εφέ ease-in-out */
+    margin: 0 -200px;
+    z-index: 0;
 }
 
-        .carousel-item {
-            min-width: 100%;
-            box-sizing: border-box;
-            margin: 0 10px;
-            overflow: hidden;
-            height: 450px; /* Καθορίζετε εδώ το σταθερό ύψος των εικόνων */
-            display: flex;
-            align-items: center; /* Κεντράρει την εικόνα κατακόρυφα μέσα στον .carousel-item */
-        }
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    margin: 0 10px;
+    overflow: hidden;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out; /* Προσθήκη μετάβασης στη διαφάνεια για εφέ εξαφάνισης/εμφάνισης */
+}
 
-        img {
-            width: 100%;
-            height: auto;
-        }
-        #prev, #next {
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out; /* Προσθήκη μετάβασης κατά το ζουμ στις εικόνες */
+}
+
+/* Προσθήκη κανόνα για την εικόνα που βρίσκεται στο ενεργό κέντρο */
+.carousel-item.active img {
+    transform: scale(1.1); /* Μικρή αύξηση του μεγέθους κατά 10% για εφέ zoom-in */
+}
+
+#prev, #next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -82,32 +90,33 @@
     border: none;
     outline: none;
     transition: background-color 0.3s;
-    z-index: 1; /* Ορίζει τη θέση στη στοίβα */
+    z-index: 1;
 }
 
-        #prev:hover, #next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
+#prev:hover, #next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
-        #prev {
-            left: 10px;
-        }
+#prev {
+    left: 10px;
+}
 
-        #next {
-            right: 10px;
-        }
-        #prev:hover,
-#next:hover {
+#next {
+    right: 10px;
+}
+
+#prev:hover, #next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
 #prev:hover {
-    left: 5px; /* Μικρότερη απόσταση από το αριστερό άκρο κατά το hover */
+    left: 5px;
 }
 
 #next:hover {
-    right: 5px; /* Μικρότερη απόσταση από το δεξί άκρο κατά το hover */
+    right: 5px;
 }
+
               /* Επιλογέας [data-lang="technicalSupportDescription"] αποκρύπτει το συγκεκριμένο παράγραφο */
     p[data-lang="technicalSupportDescription"] {
       display: none;
