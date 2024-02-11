@@ -64,7 +64,7 @@
     height: 450px;
     display: flex;
     align-items: center;
-    transition: opacity 0.5s ease-in-out; /* Προσθήκη μετάβασης στη διαφάνεια για εφέ εξαφάνισης/εμφάνισης */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Προσθήκη μετάβασης και στην κλίμακα (zoom) */
 }
 
 .carousel-item img {
@@ -116,6 +116,7 @@
 #next:hover {
     right: 5px;
 }
+
 
               /* Επιλογέας [data-lang="technicalSupportDescription"] αποκρύπτει το συγκεκριμένο παράγραφο */
     p[data-lang="technicalSupportDescription"] {
