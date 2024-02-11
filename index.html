@@ -31,72 +31,83 @@
 
 
         <style>
-#image-carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Απαλή μετάβαση */
-    margin: 0 -200px;
-    z-index: 0;
-}
-
-.carousel-item {
-    transition: opacity 0.5s ease-in-out; /* Απαλή μετάβαση στη διαφάνεια */
-    min-width: 100%;
-    box-sizing: border-box;
-    margin: 0 10px;
-    overflow: hidden;
-    height: 450px;
-    display: flex;
-    align-items: center;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s ease-in-out; /* Απαλή μετάβαση και στην εικόνα */
-}
-
-#prev, #next {
-    /* Αφαιρέστε το background-color, καθώς η μετάβαση θα είναι στο χρώμα του κειμένου */
-    color: white;
-    padding: 10px;
-    border: none;
-    outline: none;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-#prev:hover, #next:hover {
-    color: black; /* Αλλαγή χρώματος κατά το hover */
-}
-
-#prev:hover {
-    left: 5px;
-}
-
-#next:hover {
-    right: 5px;
-}
-
-/* Υπόλοιπος κώδικας της επικεφαλίδας */
 #home {
-    margin-top: 20px;
+    margin-top: 20px; /* Προεπιλεγμένο margin-top */
 }
 
 @media screen and (max-width: 600px) {
     #home {
-        margin-top: 40px;
+        margin-top: 40px; /* Προσαρμοσμένο margin-top για μικρές οθόνες */
     }
 }
 
+
+
 #image-section {
-    position: relative;
+    position: relative; /* Καθορίζει τον γονικό container ως σημείο αναφοράς για τα παιδιά του */
     width: 100%;
     overflow: hidden;
 }
 
-/* Ο υπόλοιπος κώδικας για το μενού, τον τίτλο, τον επιλογέα γλώσσας και το μοντάλ παραμένει ως έχει */
+#image-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin: 0 -200px; /* Προσθήκη περιθωρίων στις δύο πλευρές */
+    z-index: 0; /* Ορίζει τη θέση στη στοίβα, χαμηλότερο από τα βελάκια */
+}
 
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            margin: 0 10px;
+            overflow: hidden;
+            height: 450px; /* Καθορίζετε εδώ το σταθερό ύψος των εικόνων */
+            display: flex;
+            align-items: center; /* Κεντράρει την εικόνα κατακόρυφα μέσα στον .carousel-item */
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+        #prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    z-index: 1; /* Ορίζει τη θέση στη στοίβα */
+}
+
+        #prev:hover, #next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
+        #prev:hover,
+#next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#prev:hover {
+    left: 5px; /* Μικρότερη απόσταση από το αριστερό άκρο κατά το hover */
+}
+
+#next:hover {
+    right: 5px; /* Μικρότερη απόσταση από το δεξί άκρο κατά το hover */
+}
               /* Επιλογέας [data-lang="technicalSupportDescription"] αποκρύπτει το συγκεκριμένο παράγραφο */
     p[data-lang="technicalSupportDescription"] {
       display: none;
