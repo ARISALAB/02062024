@@ -30,7 +30,7 @@
     <!-- Υπόλοιπος κώδικας της επικεφαλίδας -->
 
 
-        <style>
+  <style>
 #home {
     margin-top: 20px; /* Προεπιλεγμένο margin-top */
 }
@@ -51,34 +51,26 @@
 
 #image-carousel {
     display: flex;
-    transition: transform 1s ease-in-out; /* Αλλαγή του χρόνου μετάβασης σε 1 δευτερόλεπτο με εφέ ease-in-out */
-    margin: 0 -200px;
-    z-index: 0;
+    transition: transform 0.5s ease-in-out;
+    margin: 0 -200px; /* Προσθήκη περιθωρίων στις δύο πλευρές */
+    z-index: 0; /* Ορίζει τη θέση στη στοίβα, χαμηλότερο από τα βελάκια */
 }
 
-.carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-    margin: 0 10px;
-    overflow: hidden;
-    height: 450px;
-    display: flex;
-    align-items: center;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Προσθήκη μετάβασης και στην κλίμακα (zoom) */
-}
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            margin: 0 10px;
+            overflow: hidden;
+            height: 450px; /* Καθορίζετε εδώ το σταθερό ύψος των εικόνων */
+            display: flex;
+            align-items: center; /* Κεντράρει την εικόνα κατακόρυφα μέσα στον .carousel-item */
+        }
 
-.carousel-item img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s ease-in-out; /* Προσθήκη μετάβασης κατά το ζουμ στις εικόνες */
-}
-
-/* Προσθήκη κανόνα για την εικόνα που βρίσκεται στο ενεργό κέντρο */
-.carousel-item.active img {
-    transform: scale(1.1); /* Μικρή αύξηση του μεγέθους κατά 10% για εφέ zoom-in */
-}
-
-#prev, #next {
+        img {
+            width: 100%;
+            height: auto;
+        }
+        #prev, #next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -90,33 +82,32 @@
     border: none;
     outline: none;
     transition: background-color 0.3s;
-    z-index: 1;
+    z-index: 1; /* Ορίζει τη θέση στη στοίβα */
 }
 
-#prev:hover, #next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
+        #prev:hover, #next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
 
-#prev {
-    left: 10px;
-}
+        #prev {
+            left: 10px;
+        }
 
-#next {
-    right: 10px;
-}
-
-#prev:hover, #next:hover {
+        #next {
+            right: 10px;
+        }
+        #prev:hover,
+#next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
 #prev:hover {
-    left: 5px;
+    left: 5px; /* Μικρότερη απόσταση από το αριστερό άκρο κατά το hover */
 }
 
 #next:hover {
-    right: 5px;
+    right: 5px; /* Μικρότερη απόσταση από το δεξί άκρο κατά το hover */
 }
-
 
               /* Επιλογέας [data-lang="technicalSupportDescription"] αποκρύπτει το συγκεκριμένο παράγραφο */
     p[data-lang="technicalSupportDescription"] {
@@ -132,9 +123,6 @@
     p[data-lang="artsAdministrationDescription"] {
       display: none;
     }
-
-
-            
         </style>
       
     <div id="menu-icon">&#9776;</div>
